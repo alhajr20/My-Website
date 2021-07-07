@@ -30,13 +30,13 @@ const Header = () => (
       <nav className="header__nav">
         <ul>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/">About</Link>
           </li>
           <li>
-            <Link to="/about">Blog</Link>
+            <Link to="/blog">Blog</Link>
           </li>
           <li>
-            <Link to="/about">Portfolio</Link>
+            <Link to="/portfolio">Portfolio</Link>
           </li>
         </ul>
       </nav>
