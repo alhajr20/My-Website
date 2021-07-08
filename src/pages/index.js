@@ -3,10 +3,14 @@ import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import PromoSection from "../components/index/promo";
+import SkillsSection from "../components/index/skills";
+
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <h1>Home Page</h1>
+    <PromoSection/>
+    <SkillsSection/>
   </Layout>
 )
 
