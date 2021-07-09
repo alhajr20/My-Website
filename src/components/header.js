@@ -6,6 +6,7 @@ import logo from '../images/KB.png';
 
 const Header = () => {
   const [fixed, menuFixed] = useState(false);
+  const [show, menuShow] = useState(false);
 
   const showNavBar = () => {
     if (window.scrollY > 100) {
@@ -20,6 +21,7 @@ const Header = () => {
 
     return () => window.removeEventListener("scroll", showNavBar);
   }, []);
+  
 
   return (
     <header
@@ -42,7 +44,7 @@ const Header = () => {
           </Link>
         </h1>
 
-        <nav className="header__nav">
+        <nav className={`header__nav ${show && 'header__nav-active'}`}>
           <ul>
             <li>
               <Link to="/">About</Link>
@@ -55,6 +57,12 @@ const Header = () => {
             </li>
           </ul>
         </nav>
+
+        <div className="header__hamburger">
+          <button className={`menu-btn ${show && 'menu-active'}`} onClick={() => menuShow(!show)}>
+            <span></span>
+          </button>
+        </div>
       </div>
     </header>
   )

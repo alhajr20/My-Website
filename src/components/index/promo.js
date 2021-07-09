@@ -4,7 +4,7 @@ import avatar from '../../images/avatar.jpg';
 
 function PromoSection() {
     return (
-        <div class="promo">
+        <div className="promo">
             <div className="promo__avatar">
                 <img src={avatar} alt="avatar" />
             </div>
