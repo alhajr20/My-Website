@@ -1,0 +1,94 @@
+.projects {
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20rem, auto));
+        gap: 30px;
+        margin-top: 25px;
+    }
+
+    &__item {
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+        transition: all .5s;
+
+        &:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+        }
+
+        img {
+            width: 100%;
+        }
+
+        figcaption {
+            padding: 1.5rem;
+
+            h3 {
+                font-size: 20px;
+
+                a {
+                    color: $text-color;
+                    text-decoration: none;
+                }
+            }
+
+            p {
+                margin-top: 20px;
+            }
+
+            .project-skills {
+                margin-top: 20px;
+
+                ul {
+                    list-style: none;
+                    display: flex;
+
+                    li {
+                        background-color: $green;
+                        padding: 2px 10px;
+                        color: #fff;
+                        &:not(:last-child) {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: flex-start;
+                margin-top: 20px;
+                a.link {
+                    display: flex;
+                    align-items: center;
+                    color: $text-color;
+                    text-decoration: none;
+                    padding: 10px 20px;
+                    border: 2px solid $text-color;
+                    border-radius: 4px;
+                    line-height: 15px;
+                    transition: all .3s;
+
+                    svg {
+                        margin-right: 5px;
+                        
+                        path {
+                            transition: all .3s;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: $text-color;
+                        color: #fff;
+                    }
+
+                    &:hover svg path {
+                        fill: white;
+                    }
+    
+                    &:not(:last-child) {
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
